@@ -8,7 +8,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-    title: "Hetvi Radadiya | AI & Machine Learning Developer",
+    title: "Hetvi Radadiya",
     description: "Portfolio of Hetvi Radadiya, an AI/ML enthusiast specializing in computer vision, deep learning, and data science.",
 };
 

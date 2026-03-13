@@ -2,6 +2,7 @@
 
 import { ScrollAnimation } from "./ScrollAnimation";
 import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
     {
@@ -13,6 +14,7 @@ const projects = [
         github: "https://github.com/HetviHR",
         demo: "#",
         color: "from-[#22D3EE]/20 to-[#38BDF8]/20",
+        image: "/Details/Project images/image_capitioning.png"
     },
     {
         title: "SAR Image Despeckling using TACNET",
@@ -23,6 +25,7 @@ const projects = [
         github: "https://github.com/HetviHR",
         demo: "#",
         color: "from-[#8B5CF6]/20 to-indigo-500/20",
+        image: "/Details/Project images/SAR_Image.png"
     },
     {
         title: "Sediment Feature Learning Application",
@@ -33,6 +36,7 @@ const projects = [
         github: "https://github.com/HetviHR",
         demo: "#",
         color: "from-emerald-500/20 to-teal-500/20",
+        image: "/Details/Project images/sediment_analysis.png"
     },
 ];
 
@@ -64,24 +68,13 @@ export default function Projects() {
                                 <div
                                     className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40 group-hover:opacity-10 transition-opacity z-10 duration-500`}
                                 />
-                                <div className="aspect-video w-full flex items-center justify-center p-8 bg-[#0F172A]/50">
-                                    <div className="w-full h-full rounded shadow-xl bg-[#020617] border border-[#1E293B] flex flex-col pt-3 px-3">
-                                        {/* Mock Browser Header */}
-                                        <div className="flex gap-1.5 mb-3 px-1">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-                                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
-                                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
-                                        </div>
-                                        {/* Mock App Body */}
-                                        <div className="flex-1 w-full rounded-t border-t border-x border-[#1E293B] bg-[#020617] p-4 font-mono text-xs text-slate-400 overflow-hidden relative">
-                                            <div className="text-[#22D3EE] mb-2">$ python run_model.py</div>
-                                            {project.dataset && <div className="text-slate-500">Loading dataset: {project.dataset}...</div>}
-                                            {!project.dataset && <div className="text-slate-500">Loading modules...</div>}
-                                            <div className="text-slate-500">Initializing {project.title.split(' ')[0]} architecture...</div>
-                                            <div className="text-emerald-400/80 mt-2">Training complete. Evaluating metrics...</div>
-                                            <div className="text-slate-500 mt-2">System Ready.</div>
-                                        </div>
-                                    </div>
+                                <div className="aspect-[4/3] sm:aspect-video w-full flex items-center justify-center bg-[#0F172A]/50 relative overflow-hidden">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover z-0 group-hover:scale-105 transition-transform duration-700"
+                                    />
                                 </div>
                             </div>
 

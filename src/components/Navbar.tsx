@@ -31,16 +31,17 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent ${isScrolled
-                    ? "bg-[#020617]/80 backdrop-blur-md border-[#0F172A] shadow-lg"
-                    : "bg-transparent"
+                ? "bg-[#020617]/80 backdrop-blur-md border-[#0F172A] shadow-lg"
+                : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
-                    <Link href="#home" className="text-xl font-heading font-bold tracking-tighter text-E2E8F0 flex items-center gap-2">
-                        <span className="text-[#22D3EE]">{"<"}</span>
-                        Hetvi.AI
-                        <span className="text-[#22D3EE]">{"/>"}</span>
+                    <Link href="#home" className="text-xl font-heading font-bold tracking-tighter text-slate-100 flex items-center gap-3">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-md bg-gradient-to-br from-[#22D3EE] to-[#8B5CF6] text-white font-mono font-black text-sm shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+                            HR
+                        </div>
+                        <span>Portfolio</span>
                     </Link>
 
                     {/* Desktop Nav */}

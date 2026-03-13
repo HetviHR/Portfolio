@@ -40,6 +40,27 @@ export default function Experience() {
                         </div>
                     </ScrollAnimation>
 
+                    <ScrollAnimation delay={0.2} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mt-12 md:mt-0">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#1E293B] bg-[#020617] group-hover:border-[#22D3EE] text-slate-500 group-hover:text-[#22D3EE] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-colors duration-300 z-10 mx-auto absolute left-0 md:left-1/2 -ml-5 md:ml-0">
+                            <Microscope className="w-5 h-5" />
+                        </div>
+                        {/* Card */}
+                        <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-[#1E293B] bg-[#020617] shadow-xl hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] transition-shadow duration-300 group-odd:mr-0 group-even:ml-auto md:group-odd:mr-auto ml-16 md:ml-0">
+                            <time className="font-mono text-[#22D3EE] text-sm mb-2 block">Completed (Summer)</time>
+                            <h4 className="text-xl font-heading font-medium text-slate-200 mb-1">Machine Learning Intern</h4>
+                            <p className="text-sm text-slate-400 mb-4 font-mono">AIQSS</p>
+                            <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                                Worked on machine learning and deep learning projects using Python. Gained practical experience in model training, dataset preprocessing, and evaluation metrics.
+                            </p>
+                            <ul className="text-sm text-slate-500 font-mono list-disc list-inside space-y-1">
+                                <li>Neural Networks</li>
+                                <li>Dataset Preprocessing</li>
+                                <li>Model Evaluation</li>
+                            </ul>
+                        </div>
+                    </ScrollAnimation>
+
+
                 </div>
             </div>
         </section>
